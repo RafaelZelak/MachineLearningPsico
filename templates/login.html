@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-sm">
+            <h1 class="text-3xl font-bold mb-6 text-center">Login</h1>
+            <form action="/" method="POST" class="space-y-4">
+                <input type="text" name="email_or_name" placeholder="Email ou Nome" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 focus:outline-none focus:ring focus:ring-blue-500">
+                <input type="password" name="password" placeholder="Senha" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 focus:outline-none focus:ring focus:ring-blue-500">
+                <button type="submit" class="w-full bg-blue-600 p-3 rounded-lg font-semibold text-white hover:bg-blue-700 transition">Entrar</button>
+            </form>
+            <p class="mt-6 text-center">Não tem uma conta? <a href="/register" class="text-blue-400 hover:underline">Crie uma aqui</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

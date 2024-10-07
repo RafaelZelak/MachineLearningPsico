@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="font-sans">
+
+    <div class="container">
+        <h1 class="title">Bem-vindo, {{ nome }}!</h1>
+
+        <h2 class="text-accent mb-4">Enviar Mensagem</h2>
+        <form action="/dashboard" method="POST" class="space-y-4">
+            <textarea name="mensagem" placeholder="Digite sua mensagem aqui" rows="4" class="w-full p-3 rounded-lg textarea-msg border border-gray-600 text-gray-200 focus:outline-none focus:ring focus:ring-blue-600"></textarea>
+            <button type="submit" class="w-full btn-primary p-3 rounded-lg font-semibold text-white transition">Enviar Mensagem</button>
+        </form>
+
+        {% if diagnostico %}
+        <div class="card mt-8">
+            <h2 class="text-accent">Diagnóstico:</h2>
+            <p>{{ diagnostico }}</p>
+        </div>
+        {% endif %}
+
+        <h2 class="text-accent mt-8 mb-4">Histórico de mensagens</h2>
+        <ul>
+            {% for chat in chat_memory %}
+            <li class="card">
+                <strong class="text-accent">Mensagem:</strong> {{ chat['mensagem'] }} <br>
+                <strong class="text-accent">Data:</strong> {{ chat['data_criacao'] }} <br>
+                <strong class="text-accent">Diagnóstico:</strong> {{ diagnostico_map.get(chat['id_diagnostico'], 'Não encontrado') }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit" class="logout  py-2 bg-red-900 text-white font-semibold rounded hover:bg-red-600 transition">
+            Logout
+        </button>
+
+</body>
+
+</html>

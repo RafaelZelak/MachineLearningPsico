@@ -1,0 +1,55 @@
+body {
+    background-color: #1e3a5f; /* Dark blue theme background */
+    color: #e5e7eb; /* Light text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #2a4365; /* Darker shade for container */
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.textarea-msg{
+    background-color: #1f3249;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    border: none;
+
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.logout{
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: 100px;
+}
+
+.btn-primary {
+    background-color: #4977c2; /* Bright blue for buttons */
+    transition: background-color 0.5s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #6395e4; /* Darker blue on hover */
+}
+
+.card {
+    background-color: #1f3249; /* Even darker shade for cards */
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+}
+
+.text-accent {
+    color: #a5b4fc; /* Accent color for headings and highlights */
+}
